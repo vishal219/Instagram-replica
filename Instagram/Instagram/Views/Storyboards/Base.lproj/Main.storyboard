@@ -8,11 +8,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="ed3-aj-hNW">
             <objects>
                 <navigationController id="ttB-H7-5dT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="k4t-6Z-QAd"/>
+                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="k4t-6Z-QAd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5HN-Rf-t8V">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -105,11 +105,11 @@
             </objects>
             <point key="canvasLocation" x="3" y="1801"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="gH1-Ko-quX">
             <objects>
                 <navigationController id="9En-ZQ-q8H" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="jaV-Np-qwQ"/>
+                    <tabBarItem key="tabBarItem" title="" image="globe" catalog="system" id="jaV-Np-qwQ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="06g-2l-seG">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -122,11 +122,11 @@
             </objects>
             <point key="canvasLocation" x="-2112" y="1063"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="noJ-xV-l79">
             <objects>
                 <navigationController id="dqa-xm-D4B" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="nGZ-pK-OZ3"/>
+                    <tabBarItem key="tabBarItem" title="" image="plus" catalog="system" id="nGZ-pK-OZ3"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xaf-Po-yMZ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -139,11 +139,11 @@
             </objects>
             <point key="canvasLocation" x="-1393" y="1053"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="hQ3-Sp-6QC">
             <objects>
                 <navigationController id="mww-T5-oWo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="X7L-D4-Qyv"/>
+                    <tabBarItem key="tabBarItem" title="" image="bell" catalog="system" id="X7L-D4-Qyv"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NLz-JR-drE">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -156,11 +156,11 @@
             </objects>
             <point key="canvasLocation" x="-697" y="1053"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="oNB-5i-rDx">
             <objects>
                 <navigationController id="rHq-Rm-D3w" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="3f2-vJ-TRA"/>
+                    <tabBarItem key="tabBarItem" title="" image="person" catalog="system" id="3f2-vJ-TRA"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fqa-lF-q7h">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -181,6 +181,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="standardAppearance"/>
                     </tabBar>
                     <connections>
                         <segue destination="ttB-H7-5dT" kind="relationship" relationship="viewControllers" id="cp1-F2-GwX"/>
@@ -196,6 +198,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bell" catalog="system" width="128" height="124"/>
+        <image name="globe" catalog="system" width="128" height="121"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
