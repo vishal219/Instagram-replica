@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 struct SettingsModelCell {
     let title: String
@@ -33,14 +34,85 @@ class SettingViewController: UIViewController {
     }
 
     private func  configureData(){
-        let section = [
+        data.append( [
+            SettingsModelCell(title: "Edit Profile"){[weak self] in
+                self?.didTapEditProfile()
+            },
+            SettingsModelCell(title: "Invite Friends"){[weak self] in
+                self?.didTapInvite()
+            },
+            SettingsModelCell(title: "Save Original Posts"){[weak self] in
+                self?.didTapSavePosts()
+            }
+        ])
+        data.append( [
+            SettingsModelCell(title: "Terms Of Service"){[weak self] in
+                self?.openUrl(type: .terms)
+            },
+            SettingsModelCell(title: "Privacy Policy"){[weak self] in
+                self?.openUrl(type: .privacy)
+            },
+            SettingsModelCell(title: "Help/ feedback"){[weak self] in
+                self?.openUrl(type: .help)
+            }
+        ])
+        data.append( [
             SettingsModelCell(title: "Log Out"){[weak self] in
                 self?.didTapLogout()
             }
-        ]
-        data.append(section)
+        ])
+    }
+    enum SettingsUrlType{
+        case terms, privacy, help
     }
 
+    private func openUrl(type: SettingsUrlType){
+        let urlString: String
+        
+        switch type {
+        case .terms:
+            urlString = "https://help.instagram.com/581066165581870"
+        case .privacy:
+            urlString = "https://help.instagram.com/519522125107875"
+        case .help:
+            urlString = "https://help.instagram.com/"
+        }
+        
+        guard let url = URL.init(string: urlString) else{
+            return
+        }
+        
+        let vc = SFSafariViewController(url: url)
+        present(vc, animated: true, completion: nil)
+        
+        
+    }
+    private func didTapEditProfile(){
+        let vc = EditProfileViewController()
+        vc.title = "Edit Profile"
+        let navigation = UINavigationController(rootViewController: vc)
+        present(navigation, animated: true)
+    }
+    
+    private func didTapInvite(){
+        
+    }
+    
+    private func didTapSavePosts(){
+        
+    }
+    
+    private func didTapTerms(){
+        
+    }
+    
+    private func didTapPolicy(){
+        
+    }
+    
+    private func didTapHelp(){
+        
+    }
     private func didTapLogout(){
         let actionSheet = UIAlertController(title: "Log Out", message: "Are you sure you want to log out?", preferredStyle: .actionSheet)
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
