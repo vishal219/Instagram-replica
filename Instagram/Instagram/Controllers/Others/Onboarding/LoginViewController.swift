@@ -177,16 +177,43 @@ class LoginViewController: UIViewController {
         usernameField.resignFirstResponder()
         passwordField.resignFirstResponder()
         
-        guard let userNameEmail = usernameField.text, !userNameEmail.isEmpty, let password = passwordField.text, !password.isEmpty,password.count <= 8 else{
+        guard let userNameEmail = usernameField.text, !userNameEmail.isEmpty, let password = passwordField.text, !password.isEmpty,password.count >= 8 else{
             return
         }
         
         //Log In user
+        var email: String?
+        var userName: String?
+        
+        if userNameEmail.contains("@"), userNameEmail.contains("."){
+            //email
+            email = userNameEmail
+        }
+        else{
+            //username
+            userName = userNameEmail
+        }
+        AuthManager.shared.loginUser(userName: userName, email: email, password: password){ sucess in
+            DispatchQueue.main.async {
+                if sucess{
+                    //logged in
+                    self.dismiss(animated: true)
+                }
+                else{
+                    //error
+                    let alert = UIAlertController(title: "Log In Error", message: "Unable to Log In", preferredStyle: .alert)
+                    let action = UIAlertAction(title: "Dismiss", style: .cancel)
+                    alert.addAction(action)
+                    self.present(alert, animated: true)
+                }
+            }
+        }
     }
     
     @objc func didTapCreateUser() {
         let vc = RegisterationViewController()
-        present(vc, animated: true)
+        vc.title = "Create an Account"
+        present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
     }
     
     @objc func didTapTerms() {

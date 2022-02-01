@@ -57,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="-2113" y="1801"/>
         </scene>
-        <!--Notification View Controller-->
+        <!--Camera View Controller-->
         <scene sceneID="HUv-W4-rOu">
             <objects>
-                <viewController id="MNL-sK-suW" customClass="NotificationViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MNL-sK-suW" customClass="CameraViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="boP-qM-ZOw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,10 +73,10 @@
             </objects>
             <point key="canvasLocation" x="-1394" y="1801"/>
         </scene>
-        <!--Camera View Controller-->
+        <!--Notification View Controller-->
         <scene sceneID="Qqd-vN-v6u">
             <objects>
-                <viewController id="D7e-nV-bf6" customClass="CameraViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="D7e-nV-bf6" customClass="NotificationViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iZH-QC-tDD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,7 +109,7 @@
         <scene sceneID="gH1-Ko-quX">
             <objects>
                 <navigationController id="9En-ZQ-q8H" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="globe" catalog="system" id="jaV-Np-qwQ"/>
+                    <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" id="jaV-Np-qwQ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="06g-2l-seG">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -143,7 +143,7 @@
         <scene sceneID="hQ3-Sp-6QC">
             <objects>
                 <navigationController id="mww-T5-oWo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="bell" catalog="system" id="X7L-D4-Qyv"/>
+                    <tabBarItem key="tabBarItem" title="" image="heart" catalog="system" id="X7L-D4-Qyv"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NLz-JR-drE">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -181,7 +181,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="labelColor"/>
                         <tabBarAppearance key="standardAppearance"/>
                     </tabBar>
                     <connections>
@@ -198,11 +198,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bell" catalog="system" width="128" height="124"/>
-        <image name="globe" catalog="system" width="128" height="121"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="house" catalog="system" width="128" height="106"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
